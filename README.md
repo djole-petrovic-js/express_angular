@@ -5,7 +5,7 @@ For using **angularCLI-with-express-starter** you have to be installed globally:
 
 First, clone the project:
 ```bash
-$ git clone git://github.com/commercialsuicide/angularCLI-with-express-starter.git
+$ git clone https://github.com/commercialsuicide/angularCLI-with-express-starter.git
 $ cd angularCLI-with-express-starter
 ```
 
@@ -24,7 +24,7 @@ and
 ```bash
 $ npm run startAngular
 ```
-Now check the connection between Angular and Express: push the *"Test"* button on the page. If it shows *"Requests to server are OK"* - the connection is OK.
+Now open **localhost:4200** and check the connection between Angular and Express: push the *"Test"* button on the page. If it shows *"Requests to server are OK"* - the connection is OK.
 
 For communication between Angular and Express we are using proxy, proxy configuration is in `proxy.config.json`. When you need to create more routes, you have to add them to `proxy.config.json` too, by analogy with default `/test-route`.
 
