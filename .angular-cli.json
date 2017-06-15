@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "loc8r-via-angular2"
+    "name": "angularCLI-with-express-starter"
   },
   "apps": [
     {
