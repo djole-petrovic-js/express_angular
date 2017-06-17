@@ -34,6 +34,7 @@ If watcher doesn't update changes, you have to change the amount of watches. The
 ```bash
 $ echo 65536 | sudo tee -a /proc/sys/fs/inotify/max_user_watches
 ```
+And then restart `npm run startExpress` and `npm run startAngular` commands.
 
 # Build the project
 
