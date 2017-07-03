@@ -1,5 +1,5 @@
 {
-  "/test-route": {
+  "/api": {
     "target": "http://localhost:8020",
     "secure": false,
     "logLevel": "debug"

@@ -10,7 +10,7 @@ export class TestService {
   ) { }
 
   testRequest() {
-    return this.http.get(`/test-route`)
+    return this.http.get(`/api`)
       // .map((res: Response) => res.json());
       .toPromise()
       .catch(this.handleError);
