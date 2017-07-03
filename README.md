@@ -16,7 +16,7 @@ $ npm install
 
 # Run the project in developer mode
 
-For running the **angularCLI-with-express-starter**, you need to start separately **express server** and **angular CLI** (in two different terminals):
+For running the **angularCLI-with-express-starter**, you can run **express server** and **angular CLI** separately in two different terminals:
 ```bash
 $ npm run startExpress
 ```
@@ -24,6 +24,12 @@ and
 ```bash
 $ npm run startAngular
 ```
+
+Or start both client end and server end in one terminal:
+```bash
+$ npm start
+```
+
 Now open **localhost:4200** and check the connection between Angular and Express: push the *"Test"* button on the page. If it shows *"Requests to server are OK"* - the connection is OK.
 
 For communication between Angular and Express we are using proxy, proxy configuration is in `proxy.config.json`. When you need to create more routes, you have to add them to `proxy.config.json` too, by analogy with default `/test-route`.
