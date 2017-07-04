@@ -16,7 +16,7 @@ $ npm install
 
 # Run the project in developer mode
 
-For running the **angularCLI-with-express-starter**, you can run **express server** and **angular CLI** separately in two different terminals:
+For running the **angular2-with-express-starter**, you can run **express server** and **angular CLI** separately in two different terminals:
 ```bash
 $ npm run startExpress
 ```
