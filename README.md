@@ -34,6 +34,10 @@ Now open **localhost:4200** and check the connection between Angular and Express
 
 For communication between Angular and Express we are using proxy, proxy configuration is in `proxy.config.json`. When you need to create more routes, you have to add them to `proxy.config.json` too, by analogy with default `/test-route`.
 
+# Ng serve no longer has --proxy-config
+
+[issue](https://github.com/commercialsuicide/angular2-with-express-starter/issues/2)
+
 # If watcher doesn't update changes (on linux)
 
 If watcher doesn't update changes, you have to change the amount of watches. The problem with inotify is reseting this counter every time you restart your computer. You can fix it on linux (and should fix it after every computer restart) by executing the following command:
