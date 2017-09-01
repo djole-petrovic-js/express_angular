@@ -56,3 +56,8 @@ Or for production usage you have to build your app using
 ```bash
 $ ng build --prod --aot
 ```
+If `ng build --prod --aot` doesn't work, use
+```bash
+$ ng build -prod -aot false
+```
+instead.
