@@ -1,0 +1,27 @@
+<div class="container" id="container">
+  <div class="row" id="articles">
+    <div id="storiesWrapper" class="col-md-12">
+      <div *ngIf="stories && stories.length === 0" class="alert alert-info">
+        <p>No Stories at the moment...</p>
+      </div>
+
+    <div *ngIf="stories && stories.length > 0">
+      <article *ngFor="let s of stories">
+        <h1><a [routerLink]="['/stories',s.sID]">{{ s.title }}</a></h1>
+        <img class="img-responsive" src="/assets/images/{{ s.image }}" alt="" />
+        <p>{{ s.description }} <a class="continue" [routerLink]="['/stories',s.sID]">Continue Reading.</a></p>
+      </article>
+    </div>
+    </div>
+  </div>
+  <div id="paginate" class="row">
+    <div class="col-md-12">
+      <ul *ngIf="count && count.length > 0" class="pagination">
+        <li *ngFor="let page of count" [class.active]="+activePage === +page ? 'active' : ''">
+            <!-- class="${ i === +page ? 'active' : '' }" -->
+          <a [routerLink]="['/categories',category,page]">{{ page }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

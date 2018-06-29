@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-md-6">
+    <h2>If you want to submit your own story, or just want to ask us anything, please fill the form below!</h2>
+
+    <h2 style="color:red;" *ngIf="Message">{{ Message }}</h2>
+
+    <form [formGroup]="form" (submit)="onSubmit()">
+      <div class="form-group">
+        <input formControlName="firstName" class="form-control" type="text" placeholder="Your first name...">
+      </div>
+
+      <div *ngIf="firstName.touched && firstName.invalid" class="alert alert-danger">
+        <p *ngIf="firstName.errors.required">Your first name is required!</p>
+      </div>
+
+      <div class="form-group">
+        <input formControlName="lastName" type="text"  class="form-control" placeholder="Your last name...">
+      </div>
+
+      <div *ngIf="lastName.touched && lastName.invalid" class="alert alert-danger">
+        <p *ngIf="lastName.errors.required">Your last name is required!</p>
+      </div>
+
+      <div class="form-group">
+        <input formControlName="email" type="text"  class="form-control" placeholder="Your e-mail...">
+      </div>
+
+      <div *ngIf="email.touched && email.invalid" class="alert alert-danger">
+        <p *ngIf="email.errors.required">Your e-mail is required!</p>
+        <p *ngIf="email.errors.email && !email.errors.required">Please enter valid e-mail!</p>
+      </div>
+
+      <div class="form-group">
+        <textarea formControlName="message" class="form-control" placeholder="Enter you message..." id="" cols="30" rows="10"></textarea>
+      </div>
+
+      <div *ngIf="message.touched && message.invalid" class="alert alert-danger">
+        <p *ngIf="message.errors.required">Your message is required...</p>
+        <p *ngIf="message.errors.minlength">You message needs to have at least 10 characters...</p>
+        <p *ngIf="message.errors.maxlength">You message must have maximum of 100 characters...</p>
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-primary">Submit!</button>
+      </div>
+
+    </form>
+  </div>
+</div>

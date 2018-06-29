@@ -1,0 +1,21 @@
+<div *ngIf="story" class="row">
+    <div class="col-md-10">
+      <article id="singlepost">
+        <h2 style="color:red;">{{ story.title | uppercase}}</h2>
+        <h2>{{ story.description }}</h2>
+
+        <h2><a>Posted on : {{ story.created_at | date }}</a></h2>
+        <h2>View images for this story : <a [routerLink]="['/galeries',story.id]">Here</a></h2>
+        <div class="row">
+          <div class="col-md-6">
+            <img class="img-responsive" src="/assets/images/{{ story.image }}"/>
+          </div>  
+        </div>
+        <div class="row">
+          <p *ngFor="let p of story.paragraphs" @animate>
+            {{ p.content }}
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>

@@ -1,0 +1,32 @@
+<div class="slider-wrapper theme-default">
+    <div id="slider" class="nivoSlider">
+      <img src="/assets/images/1520529280.jpg">
+      <img src="/assets/images/1520529284.png">
+      <img src="/assets/images/1520529289.png">
+    </div>
+  </div>
+  
+
+<div id="line">
+    <div class="dline"></div>
+      <div class="categories-wrapper">
+        <ul class="list-inline">
+          <li *ngFor="let c of categories" class="list-inline-item" @fadeIn>
+            <a [routerLink]="['/categories/',c.categorie_name]">{{ c.categorie_name }}</a>
+          </li>
+        </ul>
+      </div>
+    <div class="dline"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="ourserv">
+        <article *ngFor="let s of stories" @slideIn>
+          <h1>{{ s.title | uppercase}}</h1>
+          <img src="/assets/images/{{ s.image }}" alt="">
+          <p>{{ s.description }}</p>
+          <a [routerLink]="['/stories',s.sID]">Read More</a>
+        </article>
+      </div>
+    </div>
+  </div>

@@ -23,6 +23,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', index);
 
+app.use(express.static(path.resolve('dist/')));
+
+app.get('/*', function (req, res) {
+  res.sendFile(path.resolve('dist/index.html'));
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -38,7 +44,11 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  
+  return res.json({
+    message:err.message,
+    status:err.status || 500
+  });
 });
 
 module.exports = app;
